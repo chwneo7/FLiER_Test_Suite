@@ -1,28 +1,10 @@
-"""This file is part of the FLiER Test Suite.
-
-    The FLiER Test Suite is free software: you can redistribute it 
-	and/or modify it under the terms of the GNU General Public License as 
-	published by the Free Software Foundation, either version 3 of the 
-	License, or (at your option) any later version.
-
-    The FLiER Test Suite is distributed in the hope that it will be 
-	useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with the FLiER Test Suite.  If not, see 
-	<http://www.gnu.org/licenses/>.
-	
-	Copyright Colin Ponce 2015.
-"""
-
 import FLiER_Substation_Test
+import FLiER_Test
 from itertools import chain
 
 # NAME = "FLiER_Substation_Test"
 # argdict = {}
-# argdict["-network"] = "../Networks/ieee57cdf.txt"
+# argdict["-network"] = "../../test_networks/ieee57cdf.txt"
 # argdict["-use_filter"] = "True"
 
 # argdict["-pmus"] = "3,12,33"
@@ -59,82 +41,82 @@ from itertools import chain
 
 
 
-# NAME = "FLiER_Substation_Test"
+# NAME = "FLiER_Test"
 # argdict = {}
-# argdict["-network"] = "../Networks/ieee57cdf.txt"
+# argdict["-network"] = "../../test_networks/ieee57cdf.txt"
 # argdict["-use_filter"] = "True"
 
 # argdict["-pmus"] = "3,12,33"
 # argdict["-write_file"] = "ieee57lines_4_13_34.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "34"
 # argdict["-write_file"] = "ieee57lines_35.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "All,57"
 # argdict["-write_file"] = "ieee57lines_All.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "3,12,33"
 # argdict["-write_file"] = "ieee57lines_4_13_34_noise0017.txt"
 # argdict["-noise"] = "0.0017"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "34"
 # argdict["-write_file"] = "ieee57lines_35_noise0017.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "All,57"
 # argdict["-write_file"] = "ieee57lines_All_noise0017.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 
 
 
 
-# NAME = "FLiER_Substation_Test"
+# NAME = "FLiER_Test"
 # argdict = {}
-# argdict["-network"] = "../Networks/ieee57cdf.txt"
+# argdict["-network"] = "../../test_networks/ieee57cdf.txt"
 # argdict["-use_filter"] = "True"
 # argdict["-FLiER_type"] = "DC_Approximation"
 
 # argdict["-pmus"] = "3,12,33"
 # argdict["-write_file"] = "ieee57lines_4_13_34DC.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "34"
 # argdict["-write_file"] = "ieee57lines_35DC.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "All,57"
 # argdict["-write_file"] = "ieee57lines_AllDC.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "3,12,33"
 # argdict["-write_file"] = "ieee57lines_4_13_34DC_noise0017.txt"
 # argdict["-noise"] = "0.0017"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "34"
 # argdict["-write_file"] = "ieee57lines_35DC_noise0017.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "All,57"
 # argdict["-write_file"] = "ieee57lines_AllDC_noise0017.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 
 
@@ -143,41 +125,41 @@ from itertools import chain
 
 
 
-# NAME = "FLiER_Substation_Test"
+# NAME = "FLiER_Test"
 # argdict = {}
-# argdict["-network"] = "../Networks/ieee118cdf.txt"
+# argdict["-network"] = "../../test_networks/ieee118cdf.txt"
 # argdict["-use_filter"] = "True"
 
 # argdict["-pmus"] = "4,16,36,65,79,99"
 # argdict["-write_file"] = "ieee118lines_5_17_37_66_80_100.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "65"
 # argdict["-write_file"] = "ieee118lines_66.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "All,118"
 # argdict["-write_file"] = "ieee118lines_All.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "4,16,36,65,79,99"
 # argdict["-write_file"] = "ieee118lines_5_17_37_66_80_100_noise0017.txt"
 # argdict["-noise"] = "0.0017"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "65"
 # argdict["-write_file"] = "ieee118lines_66_noise0017.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 # argdict["-pmus"] = "All,118"
 # argdict["-write_file"] = "ieee118lines_All_noise0017.txt"
 # args = [NAME] + list(chain(*argdict.iteritems()))
-# FLiER_Substation_Test.main(args)
+# FLiER_Test.main(args)
 
 
 
@@ -186,10 +168,12 @@ from itertools import chain
 
 
 
-NAME = "FLiER_Substation_Test"
+
+
+NAME = "FLiER_Test"
 argdict = {}
 argdict["-use_filter"] = "True"
-argdict["-network"] = "../Networks/case2383wp.m"
+argdict["-network"] = "../../test_networks/case2383wp.m"
 argdict["-pmus"] = ("1127,961,2287,512,1496,1423,470,1804,515,207,1736,1525," + 
                    "1769,1962,2237,1886,326,1403,1441,1437,208,292,1362,1905," + 
                    "1354,909,2001,917,1304,801,1889,1993,997,441,1697,890," + 
@@ -203,18 +187,18 @@ argdict["-test_scenarios"] = "1351,1988,852,2878,1329,965,913,814,653,228"
 argdict["-write_file"] = "out.txt"
 argdict["-verbose"] = "True"
 args = [NAME] + list(chain(*argdict.iteritems()))
-FLiER_Substation_Test.main(args)
+FLiER_Test.main(args)
 
 argdict["-use_filter"] = "False"
 args = [NAME] + list(chain(*argdict.iteritems()))
-FLiER_Substation_Test.main(args)
+FLiER_Test.main(args)
 
 assert False
 
 NAME = "FLiER_Substation_Test"
 argdict = {}
 argdict["-use_filter"] = "True"
-argdict["-network"] = "../Networks/case2383wp.m"
+argdict["-network"] = "../../test_networks/case2383wp.m"
 argdict["-pmus"] = ("1127,961,2287,512,1496,1423,470,1804,515,207,1736,1525," + 
                    "1769,1962,2237,1886,326,1403,1441,1437,208,292,1362,1905," + 
                    "1354,909,2001,917,1304,801,1889,1993,997,441,1697,890," + 
