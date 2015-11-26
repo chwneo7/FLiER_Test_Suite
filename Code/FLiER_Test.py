@@ -120,7 +120,7 @@ def network_FLiER_test(network_filename, pmus, noise, use_filter=True,
         out = single_FLiER_test(powernet, pmus, noise, branch_to_fail=branch, 
                                 use_filter=use_filter, pre_event_volts=pre_event_volts,
                                 FLiER_type=FLiER_type, verbose=verbose)
-        out = score_dict, initial_score_dict, fraction_ts_computed
+        score_dict, initial_score_dict, fraction_ts_computed = out
         if score_dict == False:
             # then power flow equation solver did not converge
             continue
@@ -156,6 +156,7 @@ def network_FLiER_test(network_filename, pmus, noise, use_filter=True,
     return score_list, dict_of_score_dicts, powernet.branches, solution_ranks, fraction_ts_computed_list
     
 def write_to_file(write_filename, score_dict_of_dicts, branches):
+    """ Write test results to file."""
     f = open(write_filename, 'w')
     for key, val in score_dict_of_dicts.iteritems():
         buses = [bus.index for bus in branches[key].buses]
@@ -181,6 +182,12 @@ def write_to_file(write_filename, score_dict_of_dicts, branches):
     f.close()
     
 def read_inputs(args):
+    """Read in test parameters.
+
+    See the main() function for a list of possible parameters.
+
+    Output: A tuple containing the given parameters.
+    """
     filename = None
     pmus = None
     write_filename = "out.txt"
@@ -222,6 +229,34 @@ def read_inputs(args):
             FLiER_type, verbose)
 
 def main(args):
+    """Run a test of FLiER for branch failures only.
+
+    Parameters are passed to the function in pairs, where args[i] is a flag
+    and args[i+1] is a parameter value. Valid flag, value combinations are the 
+    following:
+    -network [filename]: A .cdf or .m file containing the network to be read in.
+       A .cdf file is in the IEEE Common Data Format (see 
+       https://www.ee.washington.edu/research/pstca/). A .m file is in MATPOWER
+       format.
+    -use_filter ["True", "False"]: Whether or not to use the FLiER filtering
+       procedure. Default is True.
+    -pmus [int,...,int]: A list of the indices of buses on which to place PMUs.
+    -test_type ["Full", "Single_Lines"]: If "Full", perform a test of a 
+       substation splitting into two nodes. If "Single_Lines", perform a line 
+       failure test. Default is "Full".
+    -test_scenarios [**]: A list of the scenarios to test.
+    -FLiER_Type ["Jacobian", "DC Approximation"]: The type of matrix to use to 
+       detect line failures.
+    -noise [double]: Add noise to pre- and post-event voltage readings. Value 
+       specifies standard deviation of noise. Default is 0.0.
+    -write_file [filename]: Where to write the output data. Default is "out.txt".
+    -verbose ["True", "False"]: Turn verbose output to the command-line on or 
+       off. Default is "False".
+
+    **test_scenarios format: A semicolon-separated list in which each item is a 
+       scenario. Each item is simply a branch index, where the branches
+       in this case are 0-indexed.
+    """
     print "Running FLiER test with the following options:"
     print "\n".join(["{0}: {1}".format(args[i], args[i+1]) for i 
                      in range(1, len(args), 2)])
